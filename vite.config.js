@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import { VitePWA } from "vite-plugin-pwa";
 
 
@@ -11,7 +9,7 @@ const manifestForPlugIn = {
   manifest:{
     name:"React-vite-app",
     short_name:"react-vite-app",
-    description:"I am a simple vite app",
+    description:"Hra která naučí vaše dítě zvládat lépe vztek, smutek nebo strach",
     icons:[{
       src: '/android-chrome-192x192.png',
       sizes:'192x192',
@@ -56,5 +54,5 @@ export default defineConfig({
     outDir: '../dist',
     modulePreload: false,
   },
-  plugins: [react(), VitePWA(manifestForPlugin)],
+  plugins: [react(), VitePWA(manifestForPlugIn)],
 });

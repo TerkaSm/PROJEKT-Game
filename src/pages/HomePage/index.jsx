@@ -14,7 +14,7 @@ export const HomePage = () => {
                     <p className="home__text">Pomozte dětem lépe zvládat vypjaté emoce</p>
                 </div>
                 <div className="home__flex">
-                    <Link className="button button--secondary" to="/">Info o projektu</Link>
+                    <Link className="button button--secondary" to="/info">Info o projektu</Link>
                     <Link className="button button--primary" to="/vyber-zviratka">Vstup do hry</Link>
                 </div>
             </div>

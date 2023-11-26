@@ -1,0 +1,33 @@
+.switch-button {
+    position: absolute;
+  
+    &--1 {
+      position: absolute;
+      top: 5vmin;
+      left: 5vmin;
+    }
+  
+    &--2 {
+      position: absolute;
+      top: 5vmin;
+      right: 5vmin;
+    }
+  
+    &__base {
+      height: 10vmin;
+    }
+  
+    &__home {
+      position: absolute;
+      height: 9vmin;
+      top: 0.5vmin;
+      left: 15vmin; /* -left 1 */
+    }
+  
+    &__info {
+      position: absolute;
+      height: 9vmin;
+      top: 0.5vmin;
+      right: 15vmin; /* -right 1 */
+    }
+  }

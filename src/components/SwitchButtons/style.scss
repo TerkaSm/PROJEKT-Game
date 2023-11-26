@@ -21,13 +21,13 @@
       position: absolute;
       height: 9vmin;
       top: 0.5vmin;
-      left: 15vmin; /* -left 1 */
+      left: 15vmin; /* finální pozice po pohybu bude: left: 1vmin */
     }
   
     &__info {
       position: absolute;
       height: 9vmin;
       top: 0.5vmin;
-      right: 15vmin; /* -right 1 */
+      right: 15vmin; /* right 1 */
     }
   }

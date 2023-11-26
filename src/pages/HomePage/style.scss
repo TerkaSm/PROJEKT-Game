@@ -95,21 +95,6 @@
 
 /* ANIMACE */
 
-
-@keyframes move-dolu {
-  0%, 100% {
-    top: -153vmin;
-  }
-
-  33% {
-    top: -53vmin;
-  }
-
-  66% {
-    top: -53vmin;
-  }
-}
-
 @keyframes move-to-L {
   0%, 100% {
     top: -153vmin;
@@ -145,7 +130,6 @@
     top:  -53vmin;
     left: -10vmin
   }
-
 
 }
 

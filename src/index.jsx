@@ -19,11 +19,11 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: '/',
+        path: '/vyber-zviratka',
         element: <BabyHomePage />,
       },
       {
-        path: '/',
+        path: '/info',
         element: <InfoPage />,
       },
     ]

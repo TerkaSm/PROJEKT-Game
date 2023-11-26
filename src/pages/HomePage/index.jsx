@@ -7,20 +7,20 @@ import tygrImg from './img/tygr.svg'
 export const HomePage = () => {
   return (
     <main>
-        <section class="section">
-            <div class="home">
-                <div class="home__content">
-                    <h1 class="home__title">Vítejte ve hře</h1>
-                    <p class="home__text">Pomozte dětem lépe zvládat vypjaté emoce</p>
+        <section className="section">
+            <div className="home">
+                <div className="home__content">
+                    <h1 className="home__title">Vítejte ve hře</h1>
+                    <p className="home__text">Pomozte dětem lépe zvládat vypjaté emoce</p>
                 </div>
-                <div class="home__flex">
-                    <a class="button button--secondary" href="#">Info o projektu</a>
-                    <a class="button button--primary" href="detska-titulka.html">Vstup do hry</a>
+                <div className="home__flex">
+                    <Link className="button button--secondary" to="/">Info o projektu</Link>
+                    <Link className="button button--primary" to="/vyber-zviratka">Vstup do hry</Link>
                 </div>
             </div>
-            <img class="img img--1" src="img/panda_uvod.svg" alt="panda">
-            <img class="img img--2" src="img/kocka_uvod.svg" alt="kočka">
-            <img class="img img--3" src="img/tygr_uvod.svg" alt="tygr">
+            <img className="img img--1" src={pandaImg} alt="panda" />
+            <img className="img img--2" src={kockaImg} alt="kočka" />
+            <img className="img img--3" src={tygrImg} alt="tygr" />
         </section>
     </main>
   );

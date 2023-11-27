@@ -1,6 +1,6 @@
 import "./style.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import imgSwitchBase from "./img/posouvatko_zaklad.svg"
 import imgSwitchHome from "./img/posouvatko_domu.svg"
 import imgSwitchInfo from "./img/posouvatko_info.svg"
@@ -26,8 +26,10 @@ export const SwitchButtons = () => {
     }
   };
 
+  const navigate = useNavigate()
+
   const handleTouchEnd = () => {
-    setStartPosition(null);
+    navigate('/')
   };
 
   return (

@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 export const FullscreenButton = () => {
-  const [fullScreen, setOpenScreen] = useState(null)
 
   openFullscreen = () => {
     const element = document.documentElement;
@@ -19,5 +16,5 @@ export const FullscreenButton = () => {
 
   screen.orientation.lock('landscape')
 
-  return <button onClick={this.openFullscreen}>Otevřít na plnou obrazovku</button>;
+  return <button onClick={openFullscreen}>Otevřít na plnou obrazovku</button>;
 };

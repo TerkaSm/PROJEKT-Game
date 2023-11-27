@@ -23,49 +23,6 @@ body {
   max-width: 1400px;
 }
 
-/* Buttony */
-
-.button {
-  display: inline-block;
-  padding: clamp(0.3rem, 2vw, 1.5rem) clamp(1rem, 4vw, 3.2rem);
-  font-size: clamp(1.2rem, 2vw, 2.5rem);
-  border-radius: 30px;
-  text-decoration: none;
-  font-family: "Life Savers", serif;
-  transform: scale(1);
-  color: var(--secondary-color);
-
-  &--primary {
-    background-color: var(--primary-color);
-    transition: background-color 0.3s, transform 0.3s;
-  }
-
-  &--primary:hover {
-    background-color: var(--primary-color-hover);
-    color: var(--primary-color);
-    transform: scale(1.07);
-  }
-
-  &--secondary {
-    background-color: var(--secondary-color);
-    transition: background-color 0.3s, transform 0.3s;
-    color: var(--primary-color);
-  }
-
-  &--secondary:hover {
-    color: var(--secondary-color);
-    background-color: var(--secondarycolor-hover);
-    transform: scale(1.07);
-  }
-
-  &__wrapp {
-    text-align: end;
-
-    @media screen and (min-width: 850px) {
-      padding-top: 5rem;
-    }
-  }
-}
 
 body {
   font-family: "Karla", sans-serif;

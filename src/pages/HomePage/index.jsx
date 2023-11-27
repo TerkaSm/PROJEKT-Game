@@ -1,5 +1,5 @@
 import './style.scss';
-import { Link } from "react-router-dom";
+import { Button, buttonColor } from "../../components/Button";
 import kockaImg from './img/kocka.svg'
 import pandaImg from './img/panda.svg'
 import tygrImg from './img/tygr.svg'
@@ -14,8 +14,8 @@ export const HomePage = () => {
                     <p className="home__text">Pomozte dětem lépe zvládat vypjaté emoce</p>
                 </div>
                 <div className="home__flex">
-                    <Link className="button button--secondary" to="/info">Info o projektu</Link>
-                    <Link className="button button--primary" to="/vyber-zviratka">Vstup do hry</Link>
+                    <Button to={"/info"} color={buttonColor.secondary}>Info o projektu</Button>
+                    <Button to={"/vyber-zviratka"} color={buttonColor.primary}>Vstup do hry</Button>
                 </div>
             </div>
             <img className="img img--1" src={pandaImg} alt="panda" />

@@ -3,14 +3,17 @@ import "./style.scss";
 import { useState } from 'react';
 
 export const FullscreenButton = () => {
-  const [fullScreen, setFullScreen] = useState(true)
-  
+  const [fullScreen, setFullScreen] = useState(false);
+
   const handleClick = () => {
-    setFullScreen(openFullscreen)
     if (!fullScreen) {
-      setFullScreen
+      openFullscreen();
+    } else {
+      closeFullscreen();
     }
-  }
+    setFullScreen(!fullScreen);
+  };
+
   const openFullscreen = () => {
     const element = document.documentElement;
 
@@ -25,6 +28,23 @@ export const FullscreenButton = () => {
     }
   };
 
-  return <button onClick={handleClick} className='full-screen-button'>{!fullScreen? "Zavřít" : "Otevřít na"} plnou obrazovku</button>;
+  const closeFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  };
+
+  return (
+    <button onClick={handleClick} className="full-screen-button">
+      {!fullScreen ? 'Otevřít na' : 'Zavřít'} plnou obrazovku
+    </button>
+  );
 };
+
 

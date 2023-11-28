@@ -21,39 +21,45 @@ export const Navigation = () => {
       const deltaPosition = currentPosition - startPosition;
 
       // omezení pohybu doleva nebo doprava
-      const newLeftPosition = Math.min(1, Math.max(0, 15 + deltaPosition / window.innerWidth * 100));
+      const newPosition = Math.min(1, Math.max(0, 15 + deltaPosition / window.innerWidth * 100));
 
-      setSwipeButton(newLeftPosition);
+      setSwipeButton(newPosition);
     }
   };
 
   const navigate = useNavigate()
 
-  const handleTouchEnd = () => {
+  const handleTouchEndHome = () => {
     navigate('/')
+  };
+
+  const handleTouchEndInfo = () => {
+    navigate('/info')
   };
 
   return (
     <nav>
       <div className="swipe-button swipe-button--1">
         <img className="swipe-button__base" src={imgSwipeBase} alt="ikona posouvátko" />
-        <Link to="/vyber-zviratka" >
-          <img 
-            // onMouseDown={handleTouchEnd} 
+        <img 
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd} 
+            onTouchEnd={handleTouchEndHome} 
             style={{ left: `${swipeButton}vmin` }}
             className="swipe-button__home" 
             src={imgSwipeHome} alt="ikona domů" />
-        </Link>
       </div>
 
       <FullscreenButton />
       <div className="swipe-button swipe-button--2">
         <img className="swipe-button__base" src={imgSwipeBase} alt="ikona posouvátko" />
         <Link to="/info" >
-          <img className="swipe-button__info" src={imgSwipeInfo} alt="ikona info" />
+          <img
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEndInfo}
+            style={{ right: `${swipeButton}vmin` }} 
+            className="swipe-button__info" src={imgSwipeInfo} alt="ikona info" />
         </Link>
       </div>
     </nav>

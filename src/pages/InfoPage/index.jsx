@@ -7,7 +7,7 @@ export const InfoPage = () => {
       <main>
         <section className="section">
             {/* <Link className="button button--primary" to="/">Zpět</Link> */}
-            <Button to={"/"} color={buttonColor.primary}>Zpět</Button>
+            <Button to={"/"} color={buttonColor.primary}>domů</Button>
         </section>
       </main>
     );

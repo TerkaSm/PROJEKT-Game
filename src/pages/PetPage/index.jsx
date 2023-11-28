@@ -16,6 +16,7 @@ export const BabyHomePage = () => {
     // const {
     //   id,
     // } = PETS[profileId];
+    
   
     return (
       <main>

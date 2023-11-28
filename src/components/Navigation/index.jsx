@@ -38,7 +38,8 @@ export const Navigation = () => {
       <div className="swipe-button swipe-button--1">
         <img className="swipe-button__base" src={imgSwipeBase} alt="ikona posouvátko" />
         <Link to="/vyber-zviratka" >
-          <img onMouseDown={handleTouchEnd} 
+          <img 
+            // onMouseDown={handleTouchEnd} 
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd} 

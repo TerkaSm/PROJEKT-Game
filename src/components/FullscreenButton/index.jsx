@@ -1,6 +1,17 @@
-export const FullscreenButton = () => {
+import React from 'react';
+import "./style.scss";
+import { useState } from 'react';
 
-  openFullscreen = () => {
+export const FullscreenButton = () => {
+  const [fullScreen, setFullScreen] = useState(true)
+  
+  const handleClick = () => {
+    setFullScreen(openFullscreen)
+    if (!fullScreen) {
+      setFullScreen
+    }
+  }
+  const openFullscreen = () => {
     const element = document.documentElement;
 
     if (element.requestFullscreen) {
@@ -14,7 +25,6 @@ export const FullscreenButton = () => {
     }
   };
 
-  screen.orientation.lock('landscape')
-
-  return <button onClick={openFullscreen}>Otevřít na plnou obrazovku</button>;
+  return <button onClick={handleClick} className='full-screen-button'>{!fullScreen? "Zavřít" : "Otevřít na"} plnou obrazovku</button>;
 };
+

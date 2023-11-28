@@ -2,7 +2,7 @@ import "./style.scss";
 import { useParams } from "react-router-dom";
 import { PETS } from "../../pets";
 import { Link } from "react-router-dom";
-import { SwitchButtons } from "../../components/SwitchButtons";
+import { Navigation } from "../../components/Navigation";
 import imgCat from "./img/kocka_uvod.gif"
 import imgPanda from "./img/panda_uvod.gif"
 import imgTiger from "./img/tygr_uvod.gif"
@@ -21,7 +21,7 @@ export const BabyHomePage = () => {
     return (
       <main>
         <section className="section-background-chidren-homepage">
-          <SwitchButtons />
+          <Navigation />
           <Link to="kocka-uvod.html"><img className="img-uvod img-uvod--1" src={imgCat} alt="" /></Link>
           <Link to="panda-uvod.html"><img className="img-uvod img-uvod--2" src={imgPanda} alt="" /></Link>
           <Link to="tygr-uvod.html"><img className="img-uvod img-uvod--3" src={imgTiger} alt="" /></Link>
